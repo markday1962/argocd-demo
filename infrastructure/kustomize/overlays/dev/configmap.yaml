@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>A simple HTML document</title>
+    </head>
+    <body>
+        <p>This is Development Deployment!<p>
+    </body>
+    </html>
+kind: ConfigMap
