@@ -10,3 +10,13 @@ spec:
           image: nginx:newTag
           ports:
             - containerPort: 80
+          resources:
+            # requests:
+            #   cpu: 100m
+            #   memory: "128M"
+            limits:
+              cpu: 1000m
+              memory: "1024M"
+          env:
+          - name: LOG_LEVEL
+            value: "WARN"

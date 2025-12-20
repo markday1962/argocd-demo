@@ -10,6 +10,9 @@ namespace: dev
 nameSuffix: -dev
 resources:
   - ../../base
+  - configmap.yaml
+patches:
+  - path: deployment.yaml
 replicas:
   - count: 1
     name: nginx

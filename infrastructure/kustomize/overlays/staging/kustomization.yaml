@@ -8,6 +8,7 @@ namespace: staging
 nameSuffix: -staging
 resources:
   - ../../base
+  - configmap.yaml
 replicas:
   - name: nginx
     count: 1
