@@ -1,18 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-prod
+  name: nginx-dev
 spec:
   destination:
     name: ''
-    namespace: prod
+    namespace: dev
     server: 'https://kubernetes.default.svc'
   source:
-    path: infrastructure/kustomize/overlays/prod/
+    path: infrastructure/kustomize/overlays/dev/
     repoURL: 'https://github.com/markday1962/argocd-demo.git'
     targetRevision: HEAD
   sources: []
   project: evil-corp
+  #syncPolicy:{}  # Basic automatic sync policy
+  ## Automatic sync policy with additional options:
   syncPolicy:
     automated:
       prune: true

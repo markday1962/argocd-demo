@@ -1,19 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-# metadata:
-#   name: nginx
-commonLabels:
-  # app: nginx
-  env: staging
+labels:
+  - includeSelectors: true
+    pairs:
+      env: staging
 namespace: staging
 nameSuffix: -staging
 resources:
-  ../../base
+  - ../../base
 replicas:
-- name: nginx
-  count: 1
+  - name: nginx
+    count: 1
 images:
-- name: nginx
-  newTag: 1.24
-
-#newName
+  - name: nginx
+    newTag: '1.24'
