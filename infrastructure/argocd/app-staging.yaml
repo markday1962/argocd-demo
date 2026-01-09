@@ -12,7 +12,7 @@ spec:
     repoURL: 'https://github.com/markday1962/argocd-demo.git'
     targetRevision: HEAD
   sources: []
-  project: evil-corp
+  project: default
   syncPolicy:
     automated:
       prune: true
