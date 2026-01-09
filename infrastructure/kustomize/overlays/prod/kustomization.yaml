@@ -10,7 +10,7 @@ resources:
   - ../../base
   - configmap.yaml
 replicas:
-  - count: 2
+  - count: 1
     name: nginx
 images:
   - name: nginx
